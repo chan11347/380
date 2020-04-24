@@ -1,0 +1,11 @@
+CREATE TABLE poll (
+    pollid INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1,
+    INCREMENT BY 1),
+    topic VARCHAR(200) NOT NULL,
+    optionone VARCHAR(50) NOT NULL,
+    optiontwo VARCHAR(50) NOT NULL,
+    optionthree VARCHAR(50) NOT NULL,
+    optionfour VARCHAR(50) NOT NULL,
+    PRIMARY KEY (pollid)
+);
+

@@ -1,0 +1,12 @@
+CREATE TABLE reply (
+
+    replyid INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+    name VARCHAR(255) NOT NULL,
+    subject VARCHAR(255) NOT NULL,
+    body VARCHAR(255) NOT NULL,
+    ticket_id INTEGER DEFAULT NULL,
+    PRIMARY KEY (replyid)
+    FOREIGN KEY (ticket_id) REFERENCES ticket(id)
+
+);
+
